@@ -1,0 +1,164 @@
+.header {
+  margin-top: 0;
+  margin-bottom: 600px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  background-color: white;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-btn:hover,
+.dropdown-btn:active {
+  color: #d02c55;
+}
+
+.dropdown-btn:hover .arrow,
+.dropdown-btn:active .arrow {
+  border-top-color: #d02c55;
+}
+
+.dropdown-btn.active .arrow {
+  transform: rotate(180deg);
+}
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  right: 6px;
+  margin-top: -4px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-top-color: black;
+  transition: border-top-color 0.3s, transform 0.3s;
+}
+
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slides {
+  display: none;
+}
+
+.slides img {
+  max-height: 700px;
+  max-width: 100%;
+  height: auto;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  button {
+    padding: 10px 35px;
+  }
+}
+
+.image-container:hover .text-container {
+  opacity: 1;
+}
+
+.text-container button:hover {
+  cursor: pointer;
+  background-color: #d02c55;
+  transition: 0.3s;
+  border: none;
+  a {
+    color: #f1f1f1;
+    transition: 0.3s;
+  }
+}
+
+.text-container > * {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.text-container > *:nth-child(1) {
+  animation-delay: 0.5s; /* Задержка для текста */
+}
+
+.text-container > *:nth-child(2) {
+  animation-delay: 1s; /* Задержка для кнопки */
+}
+
+.text-container > *:nth-child(3) {
+  animation-delay: 1.5s; /* Задержка для абзаца */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
