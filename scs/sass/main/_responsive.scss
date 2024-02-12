@@ -25,6 +25,23 @@
 }
 
 @media screen and (max-width: (767px)) {
+  //slider
+  .text-container {
+    display: none; /* Скрываем текст в десктопном режиме */
+  }
+  .text-container_mob {
+    display: block; /* Показываем текст в мобильном режиме */
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: white;
+    opacity: 1; /* Убираем анимацию для мобильного режима */
+  }
+  //slider
   .container {
     max-width: 454px;
   }
