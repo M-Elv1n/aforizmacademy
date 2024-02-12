@@ -1,19 +1,18 @@
-.lessons {
-  margin-top: 60px;
+.exame {
+  padding: 50px 0;
+  margin-top: 50px;
+  background-color: #f1f1f1;
   h1 {
     text-align: center;
   }
   &__container {
-    margin-top: 20px;
+    margin-top: 50px;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
     gap: 20px;
     &--item {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -38,9 +37,4 @@
       }
     }
   }
-}
-
-.show-item {
-  opacity: 1;
-  transform: translateY(0);
 }

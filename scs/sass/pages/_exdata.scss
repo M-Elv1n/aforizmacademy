@@ -1,0 +1,10 @@
+.exdata{
+    margin-top: 100px;
+    &__img{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 500px;
+        }
+    }
+}

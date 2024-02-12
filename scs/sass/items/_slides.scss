@@ -1,0 +1,91 @@
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  button{
+    a{
+      color: black;
+    }
+  }
+}
+
+.slides {
+  display: none;
+}
+
+.slides img {
+  max-height: 700px;
+  max-width: 100%;
+  height: auto;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  button {
+    padding: 10px 35px;
+  }
+}
+
+.image-container:hover .text-container {
+  opacity: 1;
+}
+
+.text-container button:hover {
+  cursor: pointer;
+  background-color: #d02c55;
+  transition: 0.3s;
+  border: none;
+  a {
+    color: #f1f1f1;
+    transition: 0.3s;
+  }
+}
+
+.text-container > * {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.text-container > *:nth-child(1) {
+  animation-delay: 0.5s; /* Задержка для текста */
+}
+
+.text-container > *:nth-child(2) {
+  animation-delay: 1s; /* Задержка для кнопки */
+}
+
+.text-container > *:nth-child(3) {
+  animation-delay: 1.5s; /* Задержка для абзаца */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
