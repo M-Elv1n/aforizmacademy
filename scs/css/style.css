@@ -472,6 +472,8 @@ body {
 }
 .exdata__img {
   display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .exdata__img img {
@@ -721,15 +723,11 @@ body {
   }
   .exdata__img {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
   .exdata__img img {
     width: 300px;
-  }
-  .exdata__footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
   }
 }
 @media screen and (max-width: 567px) {

@@ -271,15 +271,17 @@
   .exdata {
     &__img {
       justify-content: center;
+      flex-direction: column;
+      align-items: center;
       img {
         width: 300px;
       }
     }
     &__footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
+      // position: fixed;
+      // bottom: 0;
+      // width: 100%;
+      // text-align: center;
     }
   }
 }
