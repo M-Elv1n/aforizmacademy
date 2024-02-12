@@ -237,11 +237,11 @@ body {
 .text-container_mob button {
   padding: 6px 10px;
 }
-.text-container_mob button:hover {
+.text-container_mob button button.active {
   background-color: #d02c55;
   transition: 0.3s;
 }
-.text-container_mob button:hover a {
+.text-container_mob button button.active a {
   color: #f1f1f1;
 }
 .text-container button {
@@ -735,5 +735,8 @@ body {
 @media screen and (max-width: 567px) {
   .container {
     max-width: 467px;
+  }
+  .text-container_mob {
+    bottom: 40px;
   }
 }/*# sourceMappingURL=style.css.map */
