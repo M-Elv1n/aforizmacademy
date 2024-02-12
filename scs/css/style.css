@@ -237,11 +237,11 @@ body {
 .text-container_mob button {
   padding: 6px 10px;
 }
-.text-container_mob button button.active {
+.text-container_mob button:active {
   background-color: #d02c55;
   transition: 0.3s;
 }
-.text-container_mob button button.active a {
+.text-container_mob button:active a {
   color: #f1f1f1;
 }
 .text-container button {

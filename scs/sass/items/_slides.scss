@@ -48,7 +48,7 @@
     display: none;
     button{
       padding: 6px 10px;
-      button.active{
+      &:active{
         background-color: #d02c55;
         transition: 0.3s;
         a{
