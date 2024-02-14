@@ -210,6 +210,13 @@
       &#8593;
     </button>
 
+    <script>
+      if (window.location.pathname.endsWith('.html')) {
+        window.location.href = window.location.pathname.replace('.html', '');
+      }
+    </script>
+    
+
     <script src="scs/js/burger.js"></script>
     <script src="scs/js/drop.js"></script>
     <script src="scs/js/script.js"></script>
